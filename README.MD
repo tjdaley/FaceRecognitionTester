@@ -13,3 +13,9 @@ the opencv frontal face classifiers. It's just a simple program to compare where
 
 ## Author
 Thomas J. Daley, J.D. <tjd@powerdaley.com> 
+
+## Keywords
+python
+python3
+opencv
+face recognition
