@@ -16,9 +16,8 @@ class Classifier():
 	"""
 	Classifier - Utility class
 	
-	This is a simple class to keep everything relating to a single cascade classifier
-	in one place. I started with a set of arrays, one for each property and that got
-	cumbersome, so I added this class.
+	This class keeps up with everything relating to a single cascade classifier
+	in one place.
 	"""
 	
 	def __init__(self, name, color, org, cascadeclassifier):
@@ -86,7 +85,7 @@ frameCount = 0
 # Connect to first (and probably only) camera
 cap = cv2.VideoCapture(0)
 
-# Continuously capture video frames until user presses 'Q'
+# Continuously capture video frames until user presses 'q'
 while True:
 	# Capture a frame
 	ret, frame = cap.read()
@@ -115,6 +114,10 @@ while True:
 	cv2.imshow('FACES', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
+		
+# Cleanup
+cv2.destroyAllWindows()
+cap.release()
 
 # PRINT STATS
 for classifier in classifiers:
